@@ -1,0 +1,467 @@
+<html>
+
+<head>
+    <title>SITA Dots</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/hackathon/images/favicon.ico" />
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!--</body>-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        function toggle(element_class) {
+            $("#" + element_class).toggle();
+        }
+    </script>
+    <style>
+        article ul li {
+            text-indent: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="top">
+        <nav class="top-bar"><a class="top-bar__logo" href="/"><i class="icon icon_sitadots push-tiny--right portable-push-tiny--right" style="font-size:18px;"></i><span class="top-bar__title text-white" style="text-transform:none;font-size:20px;"></span></a></nav>
+        <div class="layout position--relative z-20">
+            <div class="layout__item portable-one-whole text--center bg-white hard title-box">
+                <div class=" soft-huge--top push-huge--sides push-huge--bottom ">
+                    <h1 class="homepage-title text-sitadots-black-95 primary-font--semibold flush" style="text-align:left;">Day of Travel Services</h1>
+                    <h1 class="homepage-title text-sitadots-black-95 primary-font" style="text-align:left;">SITA</h1>
+                    <p class="homepage-subtitle text-sitadots-black-95 center-block zeta">SITA, at the heart of the air transport community</p>
+                </div>
+            </div>
+            <div class="layout__item">
+                <div class="navbar sitadots-blue">
+                    <li class="float--left push--sides text--center nav-li soft-tiny projects-li" style="margin-left:2%;">
+                        <a class="tab-link" href="/">
+                            <p class="">API info</p>
+                        </a>
+                    </li>
+                    <li class="float--left push--sides text--center nav-li soft-tiny blog-li">
+                        <a class="tab-link" href="/hackathon">
+                            <p class=""><abbr title="AA Hackathon Cheat Sheet">Hackathon</abbr></p>
+                        </a>
+                    </li>
+                    <li class="float--left push--sides text--center nav-li soft-tiny blog-li">
+                        <a class="tab-link" href="/terms">
+                            <p class=""><abbr title="Download Postman endpoints">Jargon</abbr></p>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div class="layout">
+            <div class="layout__item top-pattern one-sixth" style="position:absolute;top:0px;left:0px;background-color:#8FC1E4;"></div>
+            <div class="layout__item top-background five-sixths" style="position:absolute;top:0px;right:0px;background-color:#4F73AC;"></div>
+        </div>
+    </div>
+    <div class=" ">
+        <section>
+            <div class="layout">
+                <div class="layout__item five-sixths portable-one-whole">
+                    <div class=" soft-huge--sides soft portable-soft-huge desk-wide-huge-soft-top ">
+                        <div class="layout">
+                            <div class="layout__item one-sixth">
+
+                            </div>
+                            <div class="layout__item five-sixths">
+                                <img src="/hackathon/images/hackwars.png" width="400" align="right" style="padding-left: 20px; padding-bottom: 20px;">
+                                <h2 class="article-title">Using the APIs</h2>
+                                <h3>Welcome Hackers to the SITA API Platform</h3>
+                                <p>Below are some quick guidelines on using the APIs to get you started. For more in-depth information
+                                    on the APIs, check out the documentation under each API on the site. For those of you
+                                    who are new to the world of airline and airport development and don't know your PNR from
+                                    your GDS, check out our air transport <a href="/terms.html"><strong>Jargon</strong></a>                                    page.
+                                    <strong><font color="#4f73ac">Please click on the API links below for API keys, sample requests and data, and guidelines on using the API .</font></strong>                                    The following APIs are available to hackers for this event:</p>
+                            </div>
+                        </div>
+
+                        <div class="layout">
+                            <!-- start -->
+                            <div class="layout__item one-sixth">
+                            </div>
+                            <div class="layout__item five-sixths project-description">
+                                <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Airport API</h4>
+                                <p class="text-sitadots-black-80">This API will get basic info about an airport (including lat/long and timezone), search for
+                                    airport by name, get nearest airport(s) and get distances between airports.</p>
+                            </div>
+
+                            <div class="layout__item one-sixth">
+                            </div>
+                            <div class="layout__item five-sixths project-description">
+                                <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">BagJourney API</h4>
+                                <p class="text-sitadots-black-80">This API will return the real time status of a specific bag, or list of bags, on a particular
+                                    flight. This API is for checking if checked-in bags actually make it onto the flight
+                                    with the passenger!</p>
+                            </div>
+
+                            <div class="layout__item one-sixth">
+                            </div>
+                            <div class="layout__item five-sixths project-description">
+                                <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Beacon Registry API</h4>
+                                <p class="text-sitadots-black-80">This API retrieves the details of iBeacons placed at an airport.</p>
+                            </div>
+
+                            <div class="layout__item one-sixth">
+                            </div>
+                            <div class="layout__item five-sixths project-description">
+                                <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Boarding Pass API</h4>
+                                <p class="text-sitadots-black-80">This API is used for sending a boarding pass to passengers, and then update that boarding
+                                    pass. You must supply the passenger name and flight number in JSON data and the API will
+                                    do the rest - send the Boarding Pass via email, passbook, SMS, and mobileweb. To simulate
+                                    real life scenarios in the airport, you can update the boarding pass with new gate details,
+                                    boarding times, departure times, etc. The API will then send an update to the passenger.</p>
+                            </div>
+
+                            <div class="layout__item one-sixth">
+                            </div>
+                            <div class="layout__item five-sixths project-description">
+                                <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Flight Infomation API</h4>
+                                <p class="text-sitadots-black-80">This API provides flight statistics and information from airports around the world including
+                                    scheduled and estimated time of arrival, aircraft type, arrival airport and marketing
+                                    carrier. The service also includes notifications for status changes to a particular flight.</p>
+                            </div>
+
+                            <div class="layout__item one-sixth">
+                            </div>
+                            <div class="layout__item five-sixths project-description">
+                                <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Flight Follower API</h4>
+                                <p class="text-sitadots-black-80">This API is a REST based service which provides map images of flights and their progress
+                                    on route.</p>
+                            </div>
+
+                            <div class="layout__item one-sixth">
+                            </div>
+                            <div class="layout__item five-sixths project-description">
+                                <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">WaitTime API</h4>
+                                <p class="text-sitadots-black-80">The SITA WaitTime API is a REST based service which provides information about the length
+                                    of time that a passenger may expect to wait in a particular area, such as in airport
+                                    security line, or customs queue.</p>
+                            </div>
+
+                            <div class="layout__item one-sixth">
+                            </div>
+                            <div class="layout__item five-sixths project-description">
+                                <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Weather API</h4>
+                                <p class="text-sitadots-black-80">The SITA Weather API is a REST based service which provides current and forecasted weather
+                                    data for locations around the world.</p>
+                            </div>
+                            <!-- end layout -->
+                        </div>
+                        <br />
+                        <div class="layout__item five-sixths">
+                            <center>
+                                <p class="text-sitadots-black-80">
+                                    <font size="4"><em>Click on the API links below for guidelines on using the API and sample requests and data.</em></font>
+                                </p>
+                            </center>
+                        </div>
+
+                        <!-- API Docs Try Start -->
+                        <div class="layout">
+                            <!-- Airport API -->
+                            <div class="layout__item one-sixth">
+
+                            </div>
+                            <div class="layout__item five-sixths">
+                                <!--<img src="/hackathon/images/hackwars.png" width="400" align="right" style="padding-left: 20px; padding-bottom: 20px;">-->
+                                <h3><a href="#1st" id="1st" onclick="toggle('answer1');">Airport API</a></h3>
+
+                                <div style="display:none" id="answer1">
+                                    <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
+                                    <p><strong>API Key:</strong> API-Key-To-Follow <br>
+                                        <p>The following examples show you how to use the API to:</p>
+                                        <ul>
+                                            <li style="margin-bottom: 10px;">List all major IATA Airports
+                                                <br/><code><a href="https://airport.api.aero/airport?user_key={insert-api-key-here}"  target="_blank">curl  -v  -X GET "https://airport.api.aero/airport?user_key={insert-api-key-here}"</a></code></li>
+                                            <li style="margin-bottom: 10px;">Get specific details about an airport using an IATA code
+                                                <br/><code><a href="https://airport.api.aero/airport/AMS?user_key={insert-api-key-here}"  target="_blank">curl  -v  -X GET "https://airport.api.aero/airport/AMS?user_key={insert-api-key-here}"</a></code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Get a list of airports matching a given name or code
+                                                <br/><code><a href="https://airport.api.aero/airport/match/AMS?user_key={insert-api-key-here}"  target="_blank">curl -v  -X GET "https://airport.api.aero/airport/match/Amst?user_key={insert-api-key-here}"</a></code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Get the distance between two airports
+                                                <br/><code><a href="https://airport.api.aero/airport/distance/AMS/CDG?user_key={insert-api-key-here}&units=km"  target="_blank">curl -v  -X GET "https://airport.api.aero/airport/distance/AMS/CDG?user_key={insert-api-key-here}&units=km"</a></code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Find airports nearest a given latitude/longitude
+                                                <br/><code><a href="https://airport.api.aero/airport/nearest/52.297097/4.879903?maxAirports=10&user_key={insert-api-key-here}"  target="_blank">curl -v  -X GET "https://airport.api.aero/airport/nearest/52.297097/4.879903?maxAirports=10&user_key={insert-api-key-here}"</a></code>                                                </li>
+                                        </ul>
+                                        <p>Click <a href="https://www.developer.aero/Airport-API/API-Overview">here</a> for
+                                            documentation on the Airport API.</p>
+                                </div>
+                            </div>
+
+                            <!-- BagJourney API -->
+                            <div class="layout__item one-sixth">
+
+                            </div>
+                            <div class="layout__item five-sixths">
+                                <!--<img src="/hackathon/images/hackwars.png" width="400" align="right" style="padding-left: 20px; padding-bottom: 20px;">-->
+                                <h3><a href="#2nd" id="2nd" onclick="toggle('answer2');">BagJourney API</a></h3>
+
+                                <div style="display:none" id="answer2">
+                                    <p>The API enables you to get a history of events that describe the journey of a checked-in
+                                        bag or list of bags using either a bag tag number or PNR booking reference.</p>
+                                    <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
+                                    <p><strong>API Key:</strong> API-Key-To-Follow
+                                        <p>
+                                            <p>The following examples show you how to use the API to:</p>
+                                            <ul>
+                                                <li style="margin-bottom: 10px;">Get a list of bag tags for a particular flight and the status of those bags
+                                                    (
+                                                    <a href="https://www.developer.aero/BagJourney-API/API-Documentation/Developers'-Documents/APIs/Get-Bags-by-Flight">view full docs</a>)
+                                                    <br/><code>curl -v -X GET -H "api_key: {insert-api-key-here}" "https://bagjourney.sita.aero/baggage/bagsforflight/v1.0/airport_code/LHR/arr_dep_indicator/D/airline_code/ZZ/flight_no/0650/dep_flight_date/2015-10-14"</code>                                                    </li>
+                                                <li style="margin-bottom: 10px;">View bag tag history by passenger or bag tag (<a href="https://www.developer.aero/BagJourney-API/API-Documentation/Developers'-Documents/APIs/History-by-Tag-and-Passenger">view full docs</a>)
+                                                    <br/><code>curl -v -X GET -H "api_key: {insert-api-key-here}" "https://bagjourney.sita.aero/baggage/history/v1.0/tag/0016661920/flightdate/2015-10-14"</code>                                                    </li>
+                                            </ul>
+                                            <p><span style="color:red">Please note that the Process BIM Service and WRT Delayed Bag API routines cannot be used for this event.</span></p>
+                                            <strong>Sample Data</strong>
+                                            <p>The following sample flights have been setup for the Hackathon Event:
+                                                <ul>
+                                                    <li>ZZ 0538, LHR to HAM
+                                                        <li>ZZ 0540, LHR to HAM
+                                                            <li>ZZ 0650, HAM to LHR
+                                                </ul>
+                                                Sample bag tags and passenger details are downloadable <a href="/hackathon/sample-BagJourney-data">here</a>.
+                                            </p>
+                                            <strong>Boarding Cards and Bag Tags</strong>
+                                            <p>If you want to implement a scanning element in your app, we have provided mock
+                                                2D barcodes used on boarding passes which include bag tag info. These barcodes
+                                                match the sample passenger and bag tag data for the event for five passengers
+                                                from HAM and five from LHR. </p>
+                                            Download the <a href="/hackathon/BagJourney-barcodes">Sample Barcodes</a> PDF</p>
+                                        <strong>Testing your App</strong>
+                                        <p>You can use the following web page to log into SITA BagJourney to check the raw bag
+                                            tag data and compare with what is retrieved on your app.</p>
+
+                                        <p><a href="https://bagjourney.sita.aero/bagjourney-web/">https://bagjourney.sita.aero/bagjourney-web/</a></p>
+                                        <p>Login details for this page are:
+                                            <p>
+                                                <p>User: HACKER@HACKATHON<br> Password: Hacking@BJ</p>
+                                                <p>You just need to input a bag tag number and journey date to retrieve the
+                                                    data in BagHistory.</p>
+
+                                                <p>See <a href="https://www.developer.aero/BagJourney-API/API-Overview">here</a>                                                    for complete documentation on the BagJourney API.</p>
+                                </div>
+                            </div>
+                            <!--</div>-->
+
+                            <!-- Beacon API -->
+                            <div class="layout__item one-sixth">
+
+                            </div>
+                            <div class="layout__item five-sixths">
+                                <h3><a href="#3rd" id="3rd" onclick="toggle('answer3');">Beacon API</a></h3>
+                                <div style="display:none" id="answer3">
+                                    <p>There are two APIs available:</p>
+                                    <ul class="last">
+                                        <li style="margin-bottom: 10px;">API to get the list of iBeacons deployed at an airport
+                                            <br/><code><a href="https://cube.api.aero/atibeacon/beacons/1?airportCode=SITA_XS&app_id=e719dcad&app_key={insert-api-key-here}&preservePendingNewBeacons=true"  target="_blank">curl -v  -X GET "https://cube.api.aero/atibeacon/beacons/1?airportCode=SITA_XS&app_id=e719dcad&app_key={insert-api-key-here}&preservePendingNewBeacons=true</a></code>
+                                        </li>
+                                        <li>API to get details of an iBeacon
+                                            <br/><code><a href="https://cube.api.aero/atibeacon/beacons/1/SITA_XS/B233860B-5F9D-44EF-B657-C2966D89BBFA/1200/20?app_id=e719dcad&app_key={insert-api-key-here}&flightNumber=BA123&flightDate=2015-06-05&passengerIdentifier=kevin"  target="_blank">curl -v -X GET "https://cube.api.aero/atibeacon/beacons/1/SITA_XS/B233860B-5F9D-44EF-B657-C2966D89BBFA/1200/20?app_id=e719dcad&app_key={insert-api-key-here}&flightNumber=BA123&flightDate=2015-06-05&passengerIdentifier=~your name~"</a></code>
+                                        </li>
+                                    </ul>
+                                    <p>To access the APIs you will need an appId and apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
+                                    <p><strong>appId:</strong> APP-Id-To-Follow<br>
+                                        <strong>apiKey:</strong> API-Key-To-Follow</p>
+                                    <p>These values are passed in as HTTP headers (or query parameter). See <a href="https://www.developer.aero/Beacon-Registry-API/Registry-APIs/API-Key-Access-&-Control">here</a>                                        for examples.</p>
+                                    <p>Check out some more
+                                        <a href="https://www.developer.aero/Beacon-Registry-API/Beacon-Registry-APIs/Example-API-calls">example API calls</a>                                        and <a href="https://www.developer.aero/Beacon-Registry-API/Registry-APIs/Typical-usage-description">best practices on how to use the registry</a>                                        </p>
+                                    <p>Click <a href="https://www.developer.aero/Beacon-Registry-API/API-Overview">here</a>                                        for documentation on the Beacon APIs</p>
+                                    <p><strong>Beacon Registry SDK</strong></p>
+                                    <p>To simplify calling the REST APIs, there is an SDK available at <a href="https://github.com/sitalab/beaconRegistry">https://github.com/sitalab/beaconRegistry</a>
+
+                                </div>
+                            </div>
+
+                            <!-- Boarding Pass API -->
+                            <div class="layout__item one-sixth">
+
+                            </div>
+                            <div class="layout__item five-sixths">
+                                <h3><a href="#4th" id="4th" onclick="toggle('answer4');">Boarding Pass API</a></h3>
+                                <div style="display:none" id="answer4">
+                                    <p>To call the Boarding Pass API with your own code, the following API key can be used. <strong>Please note keys will only be available for the hackathon event!</strong><em></em></p>
+                                    <p><strong>API Key:</strong>API-Key-To-Follow<br>
+                                        <p>The API enables you to:</p>
+                                        <ul>
+                                            <li style="margin-bottom: 10px;">Issue a boarding pass. This will generate an email, SMS, MobileWeb page and Passbook.
+                                                <br/><code>curl -v -X POST -H "x-apiKey: {insert-api-key-here}" -H "Content-Type: application/xml"  -d '&#60;Request LanguageCode="en" emailAddress="<strong><span style="color:red">your email</span></strong>" mobileNumber="<strong><span style="color:red">+4477.....</span></strong>" gate="212" boardingHHMM="18:40" departHHMM="19:10" arriveHHMM="20:30" ffMiles="" DepartTerminal="Term 2" ffTier="" message="Sample"  CabinName="Economy" &#62;
+                                            &#60;Barcode firstName="Arie" lastName="van der Veek" title="MR" bookingRef="PNR123" depAirportCode="AMS" arrAirportCode="CDG" carrier="XS" flightNumber="56" depDate="2015-06-06" classCode="Y" seatNumber="21B" seqNumber="002" ffAirline="ZZ" ffNumber="123456789" ticketNumber="000123456789012" issuingCarrier="ZZ" /&#62;
+                                            &#60;/Request&#62;' "https://dev2dbp.api.aero/api/ZZ"</code>
+                                            </li>
+                                            <li style="margin-bottom: 10px;">Update an existing boarding pass.
+                                                <br/><code>curl -v -X POST -H "x-apiKey: {insert-api-key-here}" -H "Content-Type: application/xml"  -d '&#60;Request type="reissue" LanguageCode="en" id="<strong><span style="color:red">_id_value_returned_from_issue_api</span></strong>" emailAddress="<strong><span style="color:red">your email</span></strong>" mobileNumber="<strong><span style="color:red">+4477.....</span></strong>" gate="212" boardingHHMM="18:40" departHHMM="19:10" arriveHHMM="20:30" ffMiles="" DepartTerminal="Term 2" ffTier="" message="Sample"  CabinName="Economy" &#62;
+                                            &#60;Barcode firstName="Arie" lastName="van der Veek" title="MR" bookingRef="PNR123" depAirportCode="AMS" arrAirportCode="CDG" carrier="XS" flightNumber="56" depDate="2015-06-06" classCode="Y" seatNumber="21B" seqNumber="002" ffAirline="ZZ" ffNumber="123456789" ticketNumber="000123456789012" issuingCarrier="ZZ" /&#62;
+                                            &#60;/Request&#62;' "https://dev2dbp.api.aero/api/ZZ"</code>
+                                            </li>
+                                            <br />
+                                        </ul>
+                                        <p>Click <a href="https://www.developer.aero/Boarding-Pass-API/API-Overview">here</a>                                            for documentation on the Boarding Pass APIs</p>
+                                </div>
+                            </div>
+
+                            <!-- Flight Information API -->
+                            <div class="layout__item one-sixth">
+
+                            </div>
+                            <div class="layout__item five-sixths">
+                                <h3><a href="#5th" id="5th" onclick="toggle('answer5');">Flight Information API</a></h3>
+                                <div style="display:none" id="answer5">
+                                    <p>This API enables you to get information on flights including scheduled and estimated
+                                        time of arrival, aircraft type, arrival airport and marketing carrier. The service
+                                        also includes notifications for status changes to a particular flight.</p>
+                                    <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
+                                    <p><strong>API Key:</strong> API-Key-To-Follow<br>
+                                        <p>The following examples show you how to use the API to:</p>
+                                        <ul>
+                                            <li style="margin-bottom: 10px;">Get flights departing DBX on the current day, in the next 4 hours (<a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
+                                                <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://flifo-qa.api.aero/flifo/v3/flights/dxb/d"</code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Get flights arriving DXB on the current day, in the next 4 hours (<a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/AllFlights">view full docs</a>)
+                                                <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://flifo-qa.api.aero/flifo/v3/flights/dxb/a"</code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Get Emirates (EK) flights departing DXB on the current day, in the next 2 hours
+                                                (
+                                                <a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/AllFlights">view full docs</a>)
+                                                <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://flifo-qa.api.aero/flifo/v3/flights/dxb/ek/d"</code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Get British Airways (BA) flights arriving DXB on the current day, in the next
+                                                2 hours (<a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
+                                                <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://flifo-qa.api.aero/flifo/v3/flights/dxb/ba/a"</code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Get Flight Record for flight Emirates EK007 departing DBX on the current day
+                                                (
+                                                <a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
+                                                <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://flifo-qa.api.aero/flifo/v3/flight/dxb/ek/007/d"</code>                                                </li>
+
+                                            <li style="margin-bottom: 10px;">Get Flight Record for flight Emirates EK030 arriving DBX on the current day (
+                                                <a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
+                                                <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://flifo-qa.api.aero/flifo/v3/flight/dxb/ek/030/a"</code>                                                </li>
+                                        </ul>
+                                        <p>See <a href="https://www.developer.aero/Flight-Information-API/API-Overview">here</a>                                            for complete documentation on the Flight Information API.</p>
+                                </div>
+                            </div>
+
+                            <!-- Flight Follower API -->
+                            <div class="layout__item one-sixth">
+
+                            </div>
+                            <div class="layout__item five-sixths">
+                                <h3><a href="#6th" id="6th" onclick="toggle('answer6');">Flight Follower API</a></h3>
+                                <div style="display:none" id="answer6">
+                                    <p> This API allows the user to generate map images of flights and their progress. </p>
+                                    <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
+                                    <p><strong>API Key:</strong> API-Key-To-Follow<br>
+                                        <p>The following examples show you how to use the API to:</p>
+                                        <ul>
+                                            <li style="margin-bottom: 10px;">Get the flight location of BA967 from HAM and LHR. The image type is in the GIF
+                                                format <a href=>view full docs</a>)
+                                                <br/><code>curl -v -X GET -H "x-apiKey: {insert-api-key-here}" 'https://flighttracker-qa.api.aero/flighttracker/v1/HAM/LHR/BA/967?imgWidth=300&imgLength=300&rfc2397=false&base64=false'</code>                                                </li>
+                                        </ul>
+                                        <p>See <a href="">here</a> for complete documentation on the Flight Follower API.</p>
+                                </div>
+                            </div>
+
+                            <!-- Waittime API -->
+                            <div class="layout__item one-sixth">
+
+                            </div>
+                            <div class="layout__item five-sixths">
+                                <h3><a href="#8th" id="8th" onclick="toggle('answer8');">WaitTime API</a></h3>
+                                <div style="display:none" id="answer8">
+                                    <p>WaitTime API provides wait times for queues in an airport.</p>
+                                    <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
+                                    <p><strong>API Key:</strong> API-Key-To-Follow
+                                        <p>
+                                            <p>Sample WaitTime data is available for the following airports:<br> SIN, DBX, KEF,
+                                                LHR, AMS, HAM, MUC and SDY</p>
+                                            <p>The following example requests show you how to use the API to:</p>
+                                            <ul>
+                                                <li style="margin-bottom: 10px;">Get current wait times at an airport (<a href="https://www.developer.aero/WaitTime-API/Documentation/Developer-Documentation/Current">view full docs</a>)
+                                                    <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://waittime-qa.api.aero/waittime/v1/current/DBX"</code>                                                    </li>
+                                                <li style="margin-bottom: 10px;">Get wait time projections at an airport (<a href="https://www.developer.aero/WaitTime-API/Documentation/Developer-Documentation/Projection">view full docs</a>)
+                                                    <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://waittime-qa.api.aero/waittime/v1/projection/DBX"</code>                                                    </li>
+                                            </ul>
+                                </div>
+                            </div>
+
+                            <!-- Weather API -->
+                            <div class="layout__item one-sixth">
+
+                            </div>
+                            <div class="layout__item five-sixths">
+                                <h3><a href="#9th" id="9th" onclick="toggle('answer9');">Weather API</a></h3>
+                                <div style="display:none" id="answer9">
+                                    <p>Weather API provides current weather conditions and forecast for over 1800 airports,
+                                        worldwide.
+                                    </p>
+                                    <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
+                                    <p><strong>API Key:</strong> API-Key-To-Follow<br>
+                                        <p>The following examples show you how to use the API to:</p>
+                                        <ul>
+                                            <li style="margin-bottom: 10px;">Get current weather for HAM in Celsius (<a href="https://www.developer.aero/Weather-API/Weather-API-Documentation/Weather-Developers-Documentation/Current-API">view full docs</a>)
+                                                <br/><code>curl -v -X GET -H "x-apiKey: {insert-api-key-here}" 'https://weather-qa.api.aero/weather/v1/current/HAM?temperatureScale=C'</code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Get the 7 day weather forecast for HAM in Fahrenheit (<a href="https://www.developer.aero/Weather-API/Weather-API-Documentation/Weather-Developers-Documentation/Forecast-API">view full docs</a>)
+                                                <br/><code>curl -v -X GET -H "x-apiKey: {insert-api-key-here}" 'https://weather-qa.api.aero/weather/v1/forecast/HAM?duration=7&temperatureScale=F' </code>
+                                            </li>
+                                            <li style="margin-bottom: 10px;">Get the combined current &amp; forecast weather for HAM (<a href="https://www.developer.aero/Weather-API/Weather-API-Documentation/Weather-Developers-Documentation/Combined-API">view full docs</a>)
+                                                <br/><code>curl -v -X GET -H "x-apiKey: {insert-api-key-here}" 'https://weather-qa.api.aero/weather/v1/combined/HAM'</code>                                                </li>
+                                        </ul>
+                                        <p>See <a href="https://www.developer.aero/Weather-API/API-Overview">here</a> for complete
+                                            documentation on the Weather API.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+    <section>
+        <div class="layout bg-sitadots-blue">
+            <div class=" soft-huge push-huge--left portable-soft-huge ">
+                <div class="layout__item one-whole">
+                    <div class=" soft-huge--top ">
+                        <h2 class="primary-font">SITA</h2>
+                        <div class=" push-huge--bottom ">
+                            <div class=" push-huge--bottom ">
+                                <p class="lead three-fifths jobs-text text-white" style="font-weight:100;">Create success, Together.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-sitadots-blue footer" style="height:94px;">
+        <ul class="footer__list float--left hidden--palm external-links">
+            <li class=" footer__item"><a href="http://www.sita.aero" class="footer__item__link">SITA.aero</a></li>
+            <li class=" footer__item"><a href="http://www.sita.aero/about-us" class="footer__item__link">ABOUT US</a></li>
+            <li class=" footer__item"><a href="http://www.sita.aero/innovation" class="footer__item__link">INNOVATION</a></li>
+            <li class=" footer__item"><a href="http://www.sita.aero/about-us/careers" class="footer__item__link">CAREERS</a></li>
+        </ul>
+        <ul class="footer__list float--left visible--palm">
+            <li class=" footer__item"><a href="http://www.sita.aero">SITA.aero</a></li>
+        </ul>
+        <ul class="footer__list footer__list--social float--right social-links">
+            <li class=" footer__item"><a class="btn btn--social hard " href="https://www.facebook.com/sitaonline"><i class="fa fa-facebook" aria-hidden="true"></i></i></a></li>
+            <li class=" footer__item"><a class="btn btn--social hard  " href="https://twitter.com/SITAOnline"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li class=" footer__item"><a class="btn btn--social hard  " href="https://www.linkedin.com/company/3061/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
