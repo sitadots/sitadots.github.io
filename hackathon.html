@@ -105,15 +105,6 @@
                             <div class="layout__item one-sixth">
                             </div>
                             <div class="layout__item five-sixths project-description">
-                                <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">BagJourney API</h4>
-                                <p class="text-sitadots-black-80">This API will return the real time status of a specific bag, or list of bags, on a particular
-                                    flight. This API is for checking if checked-in bags actually make it onto the flight
-                                    with the passenger!</p>
-                            </div>
-
-                            <div class="layout__item one-sixth">
-                            </div>
-                            <div class="layout__item five-sixths project-description">
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Beacon Registry API</h4>
                                 <p class="text-sitadots-black-80">This API retrieves the details of iBeacons placed at an airport.</p>
                             </div>
@@ -203,61 +194,6 @@
                                             documentation on the Airport API.</p>
                                 </div>
                             </div>
-
-                            <!-- BagJourney API -->
-                            <div class="layout__item one-sixth">
-
-                            </div>
-                            <div class="layout__item five-sixths">
-                                <!--<img src="/hackathon/images/hackwars.png" width="400" align="right" style="padding-left: 20px; padding-bottom: 20px;">-->
-                                <h3><a href="#2nd" id="2nd" onclick="toggle('answer2');">BagJourney API</a></h3>
-
-                                <div style="display:none" id="answer2">
-                                    <p>The API enables you to get a history of events that describe the journey of a checked-in
-                                        bag or list of bags using either a bag tag number or PNR booking reference.</p>
-                                    <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
-                                    <p><strong>API Key:</strong> API-Key-To-Follow
-                                        <p>
-                                            <p>The following examples show you how to use the API to:</p>
-                                            <ul>
-                                                <li style="margin-bottom: 10px;">Get a list of bag tags for a particular flight and the status of those bags
-                                                    (
-                                                    <a href="https://www.developer.aero/BagJourney-API/API-Documentation/Developers'-Documents/APIs/Get-Bags-by-Flight">view full docs</a>)
-                                                    <br/><code>curl -v -X GET -H "api_key: {insert-api-key-here}" "https://bagjourney.sita.aero/baggage/bagsforflight/v1.0/airport_code/LHR/arr_dep_indicator/D/airline_code/ZZ/flight_no/0650/dep_flight_date/2015-10-14"</code>                                                    </li>
-                                                <li style="margin-bottom: 10px;">View bag tag history by passenger or bag tag (<a href="https://www.developer.aero/BagJourney-API/API-Documentation/Developers'-Documents/APIs/History-by-Tag-and-Passenger">view full docs</a>)
-                                                    <br/><code>curl -v -X GET -H "api_key: {insert-api-key-here}" "https://bagjourney.sita.aero/baggage/history/v1.0/tag/0016661920/flightdate/2015-10-14"</code>                                                    </li>
-                                            </ul>
-                                            <p><span style="color:red">Please note that the Process BIM Service and WRT Delayed Bag API routines cannot be used for this event.</span></p>
-                                            <strong>Sample Data</strong>
-                                            <p>The following sample flights have been setup for the Hackathon Event:
-                                                <ul>
-                                                    <li>ZZ 0538, LHR to HAM
-                                                        <li>ZZ 0540, LHR to HAM
-                                                            <li>ZZ 0650, HAM to LHR
-                                                </ul>
-                                                Sample bag tags and passenger details are downloadable <a href="/hackathon/sample-BagJourney-data">here</a>.
-                                            </p>
-                                            <strong>Boarding Cards and Bag Tags</strong>
-                                            <p>If you want to implement a scanning element in your app, we have provided mock
-                                                2D barcodes used on boarding passes which include bag tag info. These barcodes
-                                                match the sample passenger and bag tag data for the event for five passengers
-                                                from HAM and five from LHR. </p>
-                                            Download the <a href="/hackathon/BagJourney-barcodes">Sample Barcodes</a> PDF</p>
-                                        <strong>Testing your App</strong>
-                                        <p>You can use the following web page to log into SITA BagJourney to check the raw bag
-                                            tag data and compare with what is retrieved on your app.</p>
-
-                                        <p><a href="https://bagjourney.sita.aero/bagjourney-web/">https://bagjourney.sita.aero/bagjourney-web/</a></p>
-                                        <p>Login details for this page are:
-                                            <p>
-                                                <p>User: HACKER@HACKATHON<br> Password: Hacking@BJ</p>
-                                                <p>You just need to input a bag tag number and journey date to retrieve the
-                                                    data in BagHistory.</p>
-
-                                                <p>See <a href="https://www.developer.aero/BagJourney-API/API-Overview">here</a>                                                    for complete documentation on the BagJourney API.</p>
-                                </div>
-                            </div>
-                            <!--</div>-->
 
                             <!-- Beacon API -->
                             <div class="layout__item one-sixth">
