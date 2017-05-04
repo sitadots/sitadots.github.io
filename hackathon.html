@@ -98,7 +98,7 @@
                             </div>
                             <div class="layout__item five-sixths project-description">
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Airport API</h4>
-                                <p class="text-sitadots-black-80">This API will get basic info about an airport (including lat/long and timezone), search for
+                                <p class="text-sitadots-black-80">This API will return basic info about an airport (including lat/long and timezone), search for
                                     airport by name, get nearest airport(s) and get distances between airports.</p>
                             </div>
 
@@ -106,7 +106,7 @@
                             </div>
                             <div class="layout__item five-sixths project-description">
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Bag Tag API</h4>
-                                <p class="text-sitadots-black-80">This API is used to print an IATA compliant bag tag.</p>
+                                <p class="text-sitadots-black-80">This API is used to print a PDF formatted IATA compliant bag tag.</p>
                             </div>
                             
                             <div class="layout__item one-sixth">
@@ -157,7 +157,7 @@
                             </div>
                             <div class="layout__item five-sixths project-description">
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">WaitTime API</h4>
-                                <p class="text-sitadots-black-80">The SITA WaitTime API is a REST based service which provides information about the length
+                                <p class="text-sitadots-black-80">The WaitTime API is a REST based service which provides information about the length
                                     of time that a passenger may expect to wait in a particular area, such as in airport
                                     security line, or customs queue.</p>
                             </div>
@@ -166,7 +166,7 @@
                             </div>
                             <div class="layout__item five-sixths project-description">
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Weather API</h4>
-                                <p class="text-sitadots-black-80">The SITA Weather API is a REST based service which provides current and forecasted weather
+                                <p class="text-sitadots-black-80">The Weather API is a REST based service which provides current and forecasted weather
                                     data for locations around the world.</p>
                             </div>
                             <!-- end layout -->
@@ -210,6 +210,35 @@
                                             documentation on the Airport API.</p>
                                 </div>
                             </div>
+<!-- BagTag API -->
+                            <div class="layout__item one-sixth">
+
+                            </div>
+                            <div class="layout__item five-sixths">
+                                <h3><a href="#4th" id="4th" onclick="toggle('answer14');">Bag Tag API</a></h3>
+                                <div style="display:none" id="answer14">
+                                    <p>To call the Bag Tag API with your own code, the following API key can be used. 
+                                        <strong>Please note keys will only be available for the hackathon event!</strong><em></em></p>
+                                    <p><strong>API Key:</strong>API-Key-To-Follow<br>
+                                        <p>The API enables you to:</p>
+                                        <ul>
+                                            <li style="margin-bottom: 10px;">Issue an IATA compliant bag tag. The response will contain a url to retrieve the bag tag in PDF format.                                               
+                                                <br/><code>curl -v -X POST --header "x-apiKey:139745c632a961219e91e6b416d945b4" --header "Content-Type: application/xml" -d '&#60;request languageCode="en"> 
+                                                &#60;flightDetails departDate="YYYYMMDD" departHHMM="19:10" arriveHHMM="20:30" departure="DUB" arrival="IST" flightNumber="212" 
+                                                channel="BAG"> &#60;leg depAirportCode="DUB" arrAirportCode="LHR" flightNumber="123"/> &#60;leg depAirportCode="LHR" 
+                                                arrAirportCode="GVA" flightNumber="345"/> &#60;leg depAirportCode="NYC" arrAirportCode="IST" flightNumber="678"/> &#60;/flightDetails> 
+                                                &#60;bagTags> &#60;bagTag bookingRef="PNR1253" boardingNumber="OutOfScope" passengerItineraryID="Optional"> &#60;passengers> 
+                                                &#60;passenger> &#60;bagIdentifiers> &#60;bagIdentifier LPN="12345678"  uniqueData="????"/> &#60;bagIdentifier LPN=""  
+                                                uniqueData="????"/> &#60;/bagIdentifiers> &#60;firstName>TEST&#60;/firstName> &#60;lastName>TESTER&#60;/lastName> &#60;title>MR&#60/title>
+                                                &#60;address> &#60;name>&#60;/name> &#60;street>Optional&#60;/street> &#60;city>Optional&#60;/city> &#60;state>Optional&#60;/state> 
+                                                &#60;country>Optional&#60;/country> &#60;/address> &#60;/passenger> &#60;/passengers>&#60;/bagTag> &#60;/bagTags> &#60;/request>'  
+                                                http://devbagtag.us-east-1.elasticbeanstalk.com/bagtag/v1/issue</code>
+                                            </li>
+                                          <br />
+                                        </ul>
+                                        <p>The response will contain a url where the PDF file is located.</p>
+                                </div>
+                            </div>
 
                             <!-- Beacon API -->
                             <div class="layout__item one-sixth">
@@ -224,7 +253,7 @@
                                             <br/><code><a href="https://cube.api.aero/atibeacon/beacons/1?airportCode=SITA_XS&app_id=e719dcad&app_key={insert-api-key-here}&preservePendingNewBeacons=true"  target="_blank">curl -v  -X GET "https://cube.api.aero/atibeacon/beacons/1?airportCode=SITA_XS&app_id=e719dcad&app_key={insert-api-key-here}&preservePendingNewBeacons=true</a></code>
                                         </li>
                                         <li>API to get details of an iBeacon
-                                            <br/><code><a href="https://cube.api.aero/atibeacon/beacons/1/SITA_XS/B233860B-5F9D-44EF-B657-C2966D89BBFA/1200/20?app_id=e719dcad&app_key={insert-api-key-here}&flightNumber=BA123&flightDate=2015-06-05&passengerIdentifier=kevin"  target="_blank">curl -v -X GET "https://cube.api.aero/atibeacon/beacons/1/SITA_XS/B233860B-5F9D-44EF-B657-C2966D89BBFA/1200/20?app_id=e719dcad&app_key={insert-api-key-here}&flightNumber=BA123&flightDate=2015-06-05&passengerIdentifier=~your name~"</a></code>
+                                            <br/><code><a href="https://cube.api.aero/atibeacon/beacons/1/SITA_XS/B233860B-5F9D-44EF-B657-C2966D89BBFA/1200/20?app_id=e719dcad&app_key={insert-api-key-here}"  target="_blank">curl -v -X GET "https://cube.api.aero/atibeacon/beacons/1/SITA_XS/B233860B-5F9D-44EF-B657-C2966D89BBFA/1200/20?app_id=e719dcad&app_key={insert-api-key-here}"</a></code>
                                         </li>
                                     </ul>
                                     <p>To access the APIs you will need an appId and apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
@@ -233,30 +262,15 @@
                                     <p>These values are passed in as HTTP headers (or query parameter). See <a href="https://www.developer.aero/Beacon-Registry-API/Registry-APIs/API-Key-Access-&-Control">here</a>                                        for examples.</p>
                                     <p>Check out some more
                                         <a href="https://www.developer.aero/Beacon-Registry-API/Beacon-Registry-APIs/Example-API-calls">example API calls</a>                                        and <a href="https://www.developer.aero/Beacon-Registry-API/Registry-APIs/Typical-usage-description">best practices on how to use the registry</a>                                        </p>
-                                    <p>Click <a href="https://www.developer.aero/Beacon-Registry-API/API-Overview">here</a>                                        for documentation on the Beacon APIs</p>
+                                    <p>Click <a href="https://www.developer.aero/Beacon-Registry-API/API-Overview">here</a>                                        
+                                        for documentation on the Beacon APIs.  If you are interested in using this API, please come see us to find out where the test
+                                    beacons are located in the building.</p>
                                     <p><strong>Beacon Registry SDK</strong></p>
                                     <p>To simplify calling the REST APIs, there is an SDK available at <a href="https://github.com/sitalab/beaconRegistry">https://github.com/sitalab/beaconRegistry</a>
 
                                 </div>
                             </div>
 
-                                   <div class="layout__item five-sixths">
-                                <h3><a href="#3rd" id="3rd" onclick="toggle('answer3');">Beacon API</a></h3>
-                                <div style="display:none" id="answer3">
-                                    <p>There are two APIs available:</p>
-                                    <ul class="last">
-                                        <li style="margin-bottom: 10px;">API to issue an IATA compliant bag tag. The response will contain a url to retrieve the bag tag in PDF format.
-                                            <br/><code>curl -v -X POST --header "x-apiKey:139745c632a961219e91e6b416d945b4" --header "Content-Type: application/xml" -d '<request languageCode="en"> <flightDetails departDate="YYYYMMDD" departHHMM="19:10" arriveHHMM="20:30" departure="DUB" arrival="IST" flightNumber="212" channel="BAG"> <leg depAirportCode="DUB" arrAirportCode="LHR" flightNumber="123"/> <leg depAirportCode="LHR" arrAirportCode="GVA" flightNumber="345"/> <leg depAirportCode="NYC" arrAirportCode="IST" flightNumber="678"/> </flightDetails> <bagTags> <bagTag bookingRef="PNR1253" boardingNumber="OutOfScope" passengerItineraryID="Optional"> <passengers> <passenger> <bagIdentifiers> <bagIdentifier LPN="12345678" uniqueData="????"/> <bagIdentifier LPN="" uniqueData="????"/> </bagIdentifiers> <firstName>TEST</firstName> <lastName>TESTER</lastName> <title>MR</title> <address> <name></name> <street>Optional</street> <city>Optional</city> <state>Optional</state> <country>Optional</country> </address> </passenger> </passengers></bagTag> </bagTags> </request>' http://devbagtag.us-east-1.elasticbeanstalk.com/bagtag/v1/issue 
-</code>
-                                        </li>
-                                      
-                                    </ul>
-                                    <p>To access the APIs you will need an appId and apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
-                                    <p><strong>appId:</strong> APP-Id-To-Follow<br>
-                                        <strong>apiKey:</strong> API-Key-To-Follow</p>
-
-                                </div>
-                            </div>
                             <!-- Boarding Pass API -->
                             <div class="layout__item one-sixth">
 
@@ -268,17 +282,34 @@
                                     <p><strong>API Key:</strong>API-Key-To-Follow<br>
                                         <p>The API enables you to:</p>
                                         <ul>
-                                            <li style="margin-bottom: 10px;">Issue a boarding pass. This will generate an email, SMS, MobileWeb page and Passbook.
-                                                <br/><code>curl -v -X POST -H "x-apiKey: {insert-api-key-here}" -H "Content-Type: application/xml"  -d '&#60;Request LanguageCode="en" emailAddress="<strong><span style="color:red">your email</span></strong>" mobileNumber="<strong><span style="color:red">+4477.....</span></strong>" gate="212" boardingHHMM="18:40" departHHMM="19:10" arriveHHMM="20:30" ffMiles="" DepartTerminal="Term 2" ffTier="" message="Sample"  CabinName="Economy" &#62;
-                                            &#60;Barcode firstName="Arie" lastName="van der Veek" title="MR" bookingRef="PNR123" depAirportCode="AMS" arrAirportCode="CDG" carrier="XS" flightNumber="56" depDate="2015-06-06" classCode="Y" seatNumber="21B" seqNumber="002" ffAirline="ZZ" ffNumber="123456789" ticketNumber="000123456789012" issuingCarrier="ZZ" /&#62;
-                                            &#60;/Request&#62;' "https://dev2dbp.api.aero/api/ZZ"</code>
+                                            <li style="margin-bottom: 10px;">Issue a boarding pass. This will generate an email, SMS, MobileWeb page and Apple Wallet Pass.
+                                                <br/><code>curl -v -k -X POST -H "x-apiKey: {insert-api-key-here}" -H "Content-Type: application/xml"  -d '&#60;Request 
+                                                LanguageCode="en" emailAddress="<strong><span style="color:red">your email</span></strong>" mobileNumber="<strong>
+                                                <span style="color:red">+4477.....</span></strong>" gate="212" boardingHHMM="18:40" departHHMM="19:10" arriveHHMM="20:30" ffMiles="" 
+                                                DepartTerminal="Term 2" ffTier="" message="Sample"  CabinName="Economy" &#62; &#60;Barcode firstName="TEST" lastName="TESTER" 
+                                                title="MR" formatCode="M" passengerDescription="1" sourceOfCheckIn="M" sourceOfBoardingPass="M" documentType="B" airlineDesignator="XS" 
+                                                baggageTagNumber="85123456003" &#62;&#60;Legs>&#60;Leg bookingRef="P12345" depAirportCode="DUB" arrAirportCode="LHR" carrier="XS" 
+                                                flightNumber="603" depDate="2017-05-04" classCode="Y" seatNumber="2A" seqNumber="2" passengerStatus="1" airlineNumericCode="14" 
+                                                ticketNumber="2300293153" selecteeIndicator="0" internationalDocVerification="1" marketingCarrier="XS" ffAirline="XS" 
+                                                ffNumber="123456789" IdAdIndicator="0" freeBaggageAllowance="2PC" airlineUseData=""&#62;  &#60;/Leg&#62;&#60;/Legs&#62; 
+                                                &#60;/Barcode&#62; &#60;Parameters&#62;&#60;Parameter name="BagStatus"&#62;Checked &#60;/Parameter&#62; &#60;/Parameters&#62;
+                                                &#60;/Request&#62;' "http://dev2dbp.api.aero/api/14"</code>
                                             </li>
-                                            <li style="margin-bottom: 10px;">Update an existing boarding pass.
-                                                <br/><code>curl -v -X POST -H "x-apiKey: {insert-api-key-here}" -H "Content-Type: application/xml"  -d '&#60;Request type="reissue" LanguageCode="en" id="<strong><span style="color:red">_id_value_returned_from_issue_api</span></strong>" emailAddress="<strong><span style="color:red">your email</span></strong>" mobileNumber="<strong><span style="color:red">+4477.....</span></strong>" gate="212" boardingHHMM="18:40" departHHMM="19:10" arriveHHMM="20:30" ffMiles="" DepartTerminal="Term 2" ffTier="" message="Sample"  CabinName="Economy" &#62;
-                                            &#60;Barcode firstName="Arie" lastName="van der Veek" title="MR" bookingRef="PNR123" depAirportCode="AMS" arrAirportCode="CDG" carrier="XS" flightNumber="56" depDate="2015-06-06" classCode="Y" seatNumber="21B" seqNumber="002" ffAirline="ZZ" ffNumber="123456789" ticketNumber="000123456789012" issuingCarrier="ZZ" /&#62;
-                                            &#60;/Request&#62;' "https://dev2dbp.api.aero/api/ZZ"</code>
+                                            <li style="margin-bottom: 10px;">Update an existing boarding pass.  Similar call but fields in blue are additional. And then you can modify whatever values have changed 
+                                                (ie. gate, departHHMM, BagStatus etc) 
+                                                <br/><code>curl -v -X POST -H "x-apiKey: {insert-api-key-here}" -H "Content-Type: application/xml"  -d '&#60;Request 
+                                                <span style="color:blue">type="reissue" id="23"</span> LanguageCode="en" emailAddress="<strong><span style="color:red">your email</span>
+                                                </strong>" mobileNumber="<strong><span style="color:red">+4477.....</span></strong>" gate="212" boardingHHMM="18:40" 
+                                                departHHMM="19:10" arriveHHMM="20:30" ffMiles="" DepartTerminal="Term 2" ffTier="" message="Sample"  CabinName="Economy" &#62;
+                                            &#60;Barcode firstName="TEST" lastName="TESTER" title="MR" formatCode="M" passengerDescription="1" sourceOfCheckIn="M" 
+                                                sourceOfBoardingPass="M" documentType="B" airlineDesignator="XS" baggageTagNumber="85123456003" &#62;&#60;Legs>&#60;Leg 
+                                                bookingRef="P12345" depAirportCode="DUB" arrAirportCode="LHR" carrier="XS" flightNumber="603" depDate="2017-05-04" 
+                                                classCode="Y" seatNumber="2A" seqNumber="2" passengerStatus="1" airlineNumericCode="14" ticketNumber="2300293153" 
+                                                selecteeIndicator="0" internationalDocVerification="1" marketingCarrier="XS" ffAirline="XS" ffNumber="123456789" IdAdIndicator="0" 
+                                                freeBaggageAllowance="2PC" airlineUseData=""&#62;  &#60;/Leg&#62;&#60;/Legs&#62; &#60;/Barcode&#62; &#60;Parameters&#62;
+                                                &#60;Parameter name="BagStatus"&#62;Checked &#60;/Parameter&#62; &#60;/Parameters&#62;
+                                                &#60;/Request&#62;' "http://dev2dbp.api.aero/api/14" </code>
                                             </li>
-                                            <br />
                                         </ul>
                                         <p>Click <a href="https://www.developer.aero/Boarding-Pass-API/API-Overview">here</a>                                            for documentation on the Boarding Pass APIs</p>
                                 </div>
@@ -334,14 +365,32 @@
                                     <p><strong>API Key:</strong> API-Key-To-Follow<br>
                                         <p>The following examples show you how to use the API to:</p>
                                         <ul>
-                                            <li style="margin-bottom: 10px;">Get the flight location of BA967 from HAM and LHR. The image type is in the GIF
+                                            <li style="margin-bottom: 10px;">Get the flight location of AA281 from MIA and DFW. The image type is in the GIF
                                                 format <a href=>view full docs</a>)
-                                                <br/><code>curl -v -X GET -H "x-apiKey: {insert-api-key-here}" 'https://flighttracker-qa.api.aero/flighttracker/v1/HAM/LHR/BA/967?imgWidth=300&imgLength=300&rfc2397=false&base64=false'</code>                                                </li>
+                                                <br/><code>curl -v -X GET -H "x-apiKey: {insert-api-key-here}" 'https://flightfollower-qa.api.aero/flightfollower/v1/MIA/DFW/AA/281?imgWidth=300&imgLength=300&rfc2397=false&base64=false'</code>                                                </li>
                                         </ul>
                                         <p>See <a href="">here</a> for complete documentation on the Flight Follower API.</p>
                                 </div>
                             </div>
+                            <!-- Name Matching API -->
+                            <div class="layout__item one-sixth">
 
+                            </div>
+                            <div class="layout__item five-sixths">
+                                <h3><a href="#6th" id="6th" onclick="toggle('answer16');">Name Matching API</a></h3>
+                                <div style="display:none" id="answer16">
+                                    <p> This API allows the user to determine if a name in two different formats is the same name. </p>
+                                    <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
+                                    <p><strong>API Key:</strong> API-Key-To-Follow<br>
+                                        <p>The following examples show you how to use the API to:</p>
+                                        <ul>
+                                            <li style="margin-bottom: 10px;">Insert API call description here
+                                                <br/><code>curl -v -X GET -H "x-apiKey: {insert-api-key-here}" 'https://flightfollower-qa.api.aero/flightfollower/v1/MIA/DFW/AA/281?imgWidth=300&imgLength=300&rfc2397=false&base64=false'</code>                                                </li>
+                                        </ul>
+                                        <p>Need some documentation.</p>
+                                </div>
+                            </div>
+                            
                             <!-- Waittime API -->
                             <div class="layout__item one-sixth">
 
