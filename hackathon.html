@@ -105,6 +105,13 @@
                             <div class="layout__item one-sixth">
                             </div>
                             <div class="layout__item five-sixths project-description">
+                                <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Bag Tag API</h4>
+                                <p class="text-sitadots-black-80">This API is used to print an IATA compliant bag tag.</p>
+                            </div>
+                            
+                            <div class="layout__item one-sixth">
+                            </div>
+                            <div class="layout__item five-sixths project-description">
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Beacon Registry API</h4>
                                 <p class="text-sitadots-black-80">This API retrieves the details of iBeacons placed at an airport.</p>
                             </div>
@@ -113,11 +120,12 @@
                             </div>
                             <div class="layout__item five-sixths project-description">
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Boarding Pass API</h4>
-                                <p class="text-sitadots-black-80">This API is used for sending a boarding pass to passengers, and then update that boarding
-                                    pass. You must supply the passenger name and flight number in JSON data and the API will
+                                <p class="text-sitadots-black-80">This API is used for creating and sending a boarding pass to passengers. The pass 
+                                    can then be upaded as needed. You must supply the passenger name and flight number in JSON data and the API will
                                     do the rest - send the Boarding Pass via email, passbook, SMS, and mobileweb. To simulate
                                     real life scenarios in the airport, you can update the boarding pass with new gate details,
-                                    boarding times, departure times, etc. The API will then send an update to the passenger.</p>
+                                    boarding times, departure times, etc. The API will then send an update to the passenger.  Apple Wallet, PDF,
+                                email and web passes are available. IATA version 6 barcodes are supported including bag tag id and fast track indicator.</p>
                             </div>
 
                             <div class="layout__item one-sixth">
@@ -137,6 +145,14 @@
                                     on route.</p>
                             </div>
 
+                             <div class="layout__item one-sixth">
+                            </div>
+                            <div class="layout__item five-sixths project-description">
+                                <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Name Matching API</h4>
+                                <p class="text-sitadots-black-80">This API is used to compare names in different formats to determine if they are the same
+                                    name.</p>
+                            </div>
+                            
                             <div class="layout__item one-sixth">
                             </div>
                             <div class="layout__item five-sixths project-description">
@@ -224,6 +240,23 @@
                                 </div>
                             </div>
 
+                                   <div class="layout__item five-sixths">
+                                <h3><a href="#3rd" id="3rd" onclick="toggle('answer3');">Beacon API</a></h3>
+                                <div style="display:none" id="answer3">
+                                    <p>There are two APIs available:</p>
+                                    <ul class="last">
+                                        <li style="margin-bottom: 10px;">API to issue an IATA compliant bag tag. The response will contain a url to retrieve the bag tag in PDF format.
+                                            <br/><code>curl -v -X POST --header "x-apiKey:139745c632a961219e91e6b416d945b4" --header "Content-Type: application/xml" -d '<request languageCode="en"> <flightDetails departDate="YYYYMMDD" departHHMM="19:10" arriveHHMM="20:30" departure="DUB" arrival="IST" flightNumber="212" channel="BAG"> <leg depAirportCode="DUB" arrAirportCode="LHR" flightNumber="123"/> <leg depAirportCode="LHR" arrAirportCode="GVA" flightNumber="345"/> <leg depAirportCode="NYC" arrAirportCode="IST" flightNumber="678"/> </flightDetails> <bagTags> <bagTag bookingRef="PNR1253" boardingNumber="OutOfScope" passengerItineraryID="Optional"> <passengers> <passenger> <bagIdentifiers> <bagIdentifier LPN="12345678" uniqueData="????"/> <bagIdentifier LPN="" uniqueData="????"/> </bagIdentifiers> <firstName>TEST</firstName> <lastName>TESTER</lastName> <title>MR</title> <address> <name></name> <street>Optional</street> <city>Optional</city> <state>Optional</state> <country>Optional</country> </address> </passenger> </passengers></bagTag> </bagTags> </request>' http://devbagtag.us-east-1.elasticbeanstalk.com/bagtag/v1/issue 
+</code>
+                                        </li>
+                                      
+                                    </ul>
+                                    <p>To access the APIs you will need an appId and apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
+                                    <p><strong>appId:</strong> APP-Id-To-Follow<br>
+                                        <strong>apiKey:</strong> API-Key-To-Follow</p>
+
+                                </div>
+                            </div>
                             <!-- Boarding Pass API -->
                             <div class="layout__item one-sixth">
 
