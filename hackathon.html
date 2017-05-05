@@ -283,7 +283,7 @@
                                         <p>The API enables you to:</p>
                                         <ul>
                                             <li style="margin-bottom: 10px;">Issue a boarding pass. This will generate an email, SMS, MobileWeb page and Apple Wallet Pass.
-                                                <br/><code>curl -v -k -X POST -H "x-apiKey: {insert-api-key-here}" -H "Content-Type: application/xml"  -d '&#60;Request 
+                                                <br/><code>curl -v -k -X POST -H "x-apiKey:139745c632a961219e91e6b416d945b4" -H "Content-Type: application/xml"  -d '&#60;Request 
                                                 LanguageCode="en" emailAddress="<strong><span style="color:red">your email</span></strong>" mobileNumber="<strong>
                                                 <span style="color:red">+4477.....</span></strong>" gate="212" boardingHHMM="18:40" departHHMM="19:10" arriveHHMM="20:30" ffMiles="" 
                                                 DepartTerminal="Term 2" ffTier="" message="Sample"  CabinName="Economy" &#62; &#60;Barcode firstName="TEST" lastName="TESTER" 
@@ -297,7 +297,7 @@
                                             </li>
                                             <li style="margin-bottom: 10px;">Update an existing boarding pass.  Similar call but fields in blue are additional. And then you can modify whatever values have changed 
                                                 (ie. gate, departHHMM, BagStatus etc) 
-                                                <br/><code>curl -v -X POST -H "x-apiKey: {insert-api-key-here}" -H "Content-Type: application/xml"  -d '&#60;Request 
+                                                <br/><code>curl -v -X POST -H "x-apiKey:139745c632a961219e91e6b416d945b4" -H "Content-Type: application/xml"  -d '&#60;Request 
                                                 <span style="color:blue">type="reissue" id="23"</span> LanguageCode="en" emailAddress="<strong><span style="color:red">your email</span>
                                                 </strong>" mobileNumber="<strong><span style="color:red">+4477.....</span></strong>" gate="212" boardingHHMM="18:40" 
                                                 departHHMM="19:10" arriveHHMM="20:30" ffMiles="" DepartTerminal="Term 2" ffTier="" message="Sample"  CabinName="Economy" &#62;
