@@ -98,8 +98,8 @@
                             </div>
                             <div class="layout__item five-sixths project-description">
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Airport API</h4>
-                                <p class="text-sitadots-black-80">This API will return basic info about an airport (including lat/long and timezone), search for
-                                    airport by name, get nearest airport(s) and get distances between airports.</p>
+                                <p class="text-sitadots-black-80">This API will return basic info about an airport (including lat/long and timezone), search
+                                    for airport by name, get nearest airport(s) and get distances between airports.</p>
                             </div>
 
                             <div class="layout__item one-sixth">
@@ -108,7 +108,7 @@
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Bag Tag API</h4>
                                 <p class="text-sitadots-black-80">This API is used to print a PDF formatted IATA compliant bag tag.</p>
                             </div>
-                            
+
                             <div class="layout__item one-sixth">
                             </div>
                             <div class="layout__item five-sixths project-description">
@@ -120,12 +120,13 @@
                             </div>
                             <div class="layout__item five-sixths project-description">
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Boarding Pass API</h4>
-                                <p class="text-sitadots-black-80">This API is used for creating and sending a boarding pass to passengers. The pass 
-                                    can then be upaded as needed. You must supply the passenger name and flight number in JSON data and the API will
-                                    do the rest - send the Boarding Pass via email, passbook, SMS, and mobileweb. To simulate
-                                    real life scenarios in the airport, you can update the boarding pass with new gate details,
-                                    boarding times, departure times, etc. The API will then send an update to the passenger.  Apple Wallet, PDF,
-                                email and web passes are available. IATA version 6 barcodes are supported including bag tag id and fast track indicator.</p>
+                                <p class="text-sitadots-black-80">This API is used for creating and sending a boarding pass to passengers. The pass can then
+                                    be upaded as needed. You must supply the passenger name and flight number in JSON data
+                                    and the API will do the rest - send the Boarding Pass via email, passbook, SMS, and mobileweb.
+                                    To simulate real life scenarios in the airport, you can update the boarding pass with
+                                    new gate details, boarding times, departure times, etc. The API will then send an update
+                                    to the passenger. Apple Wallet, PDF, email and web passes are available. IATA version
+                                    6 barcodes are supported including bag tag id and fast track indicator.</p>
                             </div>
 
                             <div class="layout__item one-sixth">
@@ -145,29 +146,30 @@
                                     on route.</p>
                             </div>
 
-                             <div class="layout__item one-sixth">
+                            <div class="layout__item one-sixth">
                             </div>
                             <div class="layout__item five-sixths project-description">
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Name Matching API</h4>
                                 <p class="text-sitadots-black-80">This API is used to compare names in different formats to determine if they are the same
-                                    name.</p>
+                                    name.
+                                </p>
                             </div>
-                            
+
                             <div class="layout__item one-sixth">
                             </div>
                             <div class="layout__item five-sixths project-description">
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">WaitTime API</h4>
-                                <p class="text-sitadots-black-80">The WaitTime API is a REST based service which provides information about the length
-                                    of time that a passenger may expect to wait in a particular area, such as in airport
-                                    security line, or customs queue.</p>
+                                <p class="text-sitadots-black-80">The WaitTime API is a REST based service which provides information about the length of time
+                                    that a passenger may expect to wait in a particular area, such as in airport security
+                                    line, or customs queue.</p>
                             </div>
 
                             <div class="layout__item one-sixth">
                             </div>
                             <div class="layout__item five-sixths project-description">
                                 <h4 class="text--none primary-font primary-font text-sitadots-black" style="padding-top:10px;">Weather API</h4>
-                                <p class="text-sitadots-black-80">The Weather API is a REST based service which provides current and forecasted weather
-                                    data for locations around the world.</p>
+                                <p class="text-sitadots-black-80">The Weather API is a REST based service which provides current and forecasted weather data
+                                    for locations around the world.</p>
                             </div>
                             <!-- end layout -->
                         </div>
@@ -217,12 +219,13 @@
                             <div class="layout__item five-sixths">
                                 <h3><a href="#4th" id="4th" onclick="toggle('answer14');">Bag Tag API</a></h3>
                                 <div style="display:none" id="answer14">
-                                    <p>To call the Bag Tag API with your own code, the following API key can be used. 
+                                    <p>To call the Bag Tag API with your own code, the following API key can be used.
                                         <strong>Please note keys will only be available for the hackathon event!</strong><em></em></p>
                                     <p><strong>API Key:</strong>API-Key-To-Follow<br>
                                         <p>The API enables you to:</p>
                                         <ul>
-                                            <li style="margin-bottom: 10px;">Issue an IATA compliant bag tag. The response will contain a url to retrieve the bag tag in PDF format.                                               
+                                            <li style="margin-bottom: 10px;">Issue an IATA compliant bag tag. The response will contain a url to retrieve
+                                                the bag tag in PDF format.
                                                 <br/><code>curl -v -X POST --header "x-apiKey:6c4564f89d51e4a5cc526c820d39c256" --header "Content-Type: application/xml" -d '&#60;request languageCode="en"> 
                                                 &#60;flightDetails departDate="YYYYMMDD" departHHMM="19:10" arriveHHMM="20:30" departure="DUB" arrival="IST" flightNumber="212" 
                                                 channel="BAG"> &#60;leg depAirportCode="DUB" arrAirportCode="LHR" flightNumber="123"/> &#60;leg depAirportCode="LHR" 
@@ -234,7 +237,7 @@
                                                 &#60;country>Optional&#60;/country> &#60;/address> &#60;/passenger> &#60;/passengers>&#60;/bagTag> &#60;/bagTags> &#60;/request>'  
                                                 http://devbagtag.us-east-1.elasticbeanstalk.com/bagtag/v1/issue</code>
                                             </li>
-                                          <br />
+                                            <br />
                                         </ul>
                                         <p>The response will contain a url where the PDF file is located.</p>
                                 </div>
@@ -250,10 +253,10 @@
                                     <p>There are two APIs available:</p>
                                     <ul class="last">
                                         <li style="margin-bottom: 10px;">API to get the list of iBeacons deployed at an airport
-                                            <br/><code><a href="https://cube.api.aero/atibeacon/beacons/1?airportCode=SITA_XS&app_id=e719dcad&app_key={insert-api-key-here}&preservePendingNewBeacons=true"  target="_blank">curl -v  -X GET "https://cube.api.aero/atibeacon/beacons/1?airportCode=SITA_XS&app_id=e719dcad&app_key={insert-api-key-here}&preservePendingNewBeacons=true</a></code>
+                                            <br/><code><a href="https://cube.api.aero/atibeacon/beacons/1?airportCode=SITA_XS&app_id=e719dcad&app_key={insert-api-key-here}&preservePendingNewBeacons=true"  target="_blank">curl -X GET 'https://cube.api.aero/atibeacon/beacons/1?airportCode=SITA_XS&app_id=e719dcad&app_key=cedf92f7a02fd4e8cb585ba7477d9b19&preservePendingNewBeacons=true'</a></code>
                                         </li>
                                         <li>API to get details of an iBeacon
-                                            <br/><code><a href="https://cube.api.aero/atibeacon/beacons/1/SITA_XS/B233860B-5F9D-44EF-B657-C2966D89BBFA/1200/20?app_id=e719dcad&app_key={insert-api-key-here}"  target="_blank">curl -v -X GET "https://cube.api.aero/atibeacon/beacons/1/SITA_XS/B233860B-5F9D-44EF-B657-C2966D89BBFA/1200/20?app_id=e719dcad&app_key={insert-api-key-here}"</a></code>
+                                            <br/><code><a href="https://cube.api.aero/atibeacon/beacons/1/SITA_XS/B233860B-5F9D-44EF-B657-C2966D89BBFA/1200/20?app_id=e719dcad&app_key={insert-api-key-here}"  target="_blank">curl -X GET 'https://cube.api.aero/atibeacon/beacons/1/SITA_XS/5C3F2F21-20D1-11E6-A9BB-06481FD16E71/1600/604?app_id=e719dcad&app_key=cedf92f7a02fd4e8cb585ba7477d9b19'</a></code>
                                         </li>
                                     </ul>
                                     <p>To access the APIs you will need an appId and apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
@@ -262,9 +265,8 @@
                                     <p>These values are passed in as HTTP headers (or query parameter). See <a href="https://www.developer.aero/Beacon-Registry-API/Registry-APIs/API-Key-Access-&-Control">here</a>                                        for examples.</p>
                                     <p>Check out some more
                                         <a href="https://www.developer.aero/Beacon-Registry-API/Beacon-Registry-APIs/Example-API-calls">example API calls</a>                                        and <a href="https://www.developer.aero/Beacon-Registry-API/Registry-APIs/Typical-usage-description">best practices on how to use the registry</a>                                        </p>
-                                    <p>Click <a href="https://www.developer.aero/Beacon-Registry-API/API-Overview">here</a>                                        
-                                        for documentation on the Beacon APIs.  If you are interested in using this API, please come see us to find out where the test
-                                    beacons are located in the building.</p>
+                                    <p>Click <a href="https://www.developer.aero/Beacon-Registry-API/API-Overview">here</a>                                        for documentation on the Beacon APIs. If you are interested in using this API, please
+                                        come see us to find out where the test beacons are located in the building.</p>
                                     <p><strong>Beacon Registry SDK</strong></p>
                                     <p>To simplify calling the REST APIs, there is an SDK available at <a href="https://github.com/sitalab/beaconRegistry">https://github.com/sitalab/beaconRegistry</a>
 
@@ -278,11 +280,13 @@
                             <div class="layout__item five-sixths">
                                 <h3><a href="#4th" id="4th" onclick="toggle('answer4');">Boarding Pass API</a></h3>
                                 <div style="display:none" id="answer4">
-                                    <p>To call the Boarding Pass API with your own code, the following API key can be used. <strong>Please note keys will only be available for the hackathon event!</strong><em></em></p>
+                                    <p>To call the Boarding Pass API with your own code, the following API key can be used.
+                                        <strong>Please note keys will only be available for the hackathon event!</strong><em></em></p>
                                     <p><strong>API Key:</strong>API-Key-To-Follow<br>
                                         <p>The API enables you to:</p>
                                         <ul>
-                                            <li style="margin-bottom: 10px;">Issue a boarding pass. This will generate an email, SMS, MobileWeb page and Apple Wallet Pass.
+                                            <li style="margin-bottom: 10px;">Issue a boarding pass. This will generate an email, SMS, MobileWeb page and Apple
+                                                Wallet Pass.
                                                 <br/><code>curl -v -k -X POST -H "x-apiKey:615656c7eef678e5a3c0e13382159557" -H "Content-Type: application/xml"  -d '&#60;Request 
                                                 LanguageCode="en" emailAddress="<strong><span style="color:red">your email</span></strong>" mobileNumber="<strong>
                                                 <span style="color:red">+4477.....</span></strong>" gate="212" boardingHHMM="18:40" departHHMM="19:10" arriveHHMM="20:30" ffMiles="" 
@@ -295,8 +299,9 @@
                                                 &#60;/Barcode&#62; &#60;Parameters&#62;&#60;Parameter name="BagStatus"&#62;Checked &#60;/Parameter&#62; &#60;/Parameters&#62;
                                                 &#60;/Request&#62;' "http://dev2dbp.api.aero/api/14"</code>
                                             </li>
-                                            <li style="margin-bottom: 10px;">Update an existing boarding pass.  Similar call but fields in blue are additional. And then you can modify whatever values have changed 
-                                                (ie. gate, departHHMM, BagStatus etc) 
+                                            <li style="margin-bottom: 10px;">Update an existing boarding pass. Similar call but fields in blue are additional.
+                                                And then you can modify whatever values have changed (ie. gate, departHHMM,
+                                                BagStatus etc)
                                                 <br/><code>curl -v -X POST -H "x-apiKey:615656c7eef678e5a3c0e13382159557" -H "Content-Type: application/xml"  -d '&#60;Request 
                                                 <span style="color:blue">type="reissue" id="23"</span> LanguageCode="en" emailAddress="<strong><span style="color:red">your email</span>
                                                 </strong>" mobileNumber="<strong><span style="color:red">+4477.....</span></strong>" gate="212" boardingHHMM="18:40" 
@@ -379,7 +384,8 @@
                             <div class="layout__item five-sixths">
                                 <h3><a href="#6th" id="6th" onclick="toggle('answer16');">Name Matching API</a></h3>
                                 <div style="display:none" id="answer16">
-                                    <p> This API allows the user to determine if a name in two different formats is the same name. </p>
+                                    <p> This API allows the user to determine if a name in two different formats is the same
+                                        name. </p>
                                     <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
                                     <p><strong>API Key:</strong> API-Key-To-Follow<br>
                                         <p>The following examples show you how to use the API to:</p>
@@ -390,7 +396,7 @@
                                         <p>Need some documentation.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Waittime API -->
                             <div class="layout__item one-sixth">
 
