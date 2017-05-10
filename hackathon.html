@@ -406,16 +406,14 @@
                                 <div style="display:none" id="answer8">
                                     <p>WaitTime API provides wait times for queues in an airport.</p>
                                     <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
-                                    <p><strong>API Key:</strong> API-Key-To-Follow
-                                        <p>
+                                    <p><strong>API Key:</strong> 8e2cff00ff9c6b3f448294736de5908a</p>
                                             <p>Sample WaitTime data is available for the following airports:<br> SIN, DBX, KEF,
                                                 LHR, AMS, HAM, MUC and SDY</p>
                                             <p>The following example requests show you how to use the API to:</p>
                                             <ul>
                                                 <li style="margin-bottom: 10px;">Get current wait times at an airport (<a href="https://www.developer.aero/WaitTime-API/Documentation/Developer-Documentation/Current">view full docs</a>)
-                                                    <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://waittime-qa.api.aero/waittime/v1/current/DBX"</code>                                                    </li>
-                                                <li style="margin-bottom: 10px;">Get wait time projections at an airport (<a href="https://www.developer.aero/WaitTime-API/Documentation/Developer-Documentation/Projection">view full docs</a>)
-                                                    <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://waittime-qa.api.aero/waittime/v1/projection/DBX"</code>                                                    </li>
+                                                    <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 8e2cff00ff9c6b3f448294736de5908a' "https://waittime-qa.api.aero/waittime/v1/current/DXB"</code>                                                    </li>
+                                                </li>
                                             </ul>
                                 </div>
                             </div>
