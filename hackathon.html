@@ -196,21 +196,21 @@
                                         <p>The following examples show you how to use the API to:</p>
                                         <ul>
                                             <li style="margin-bottom: 10px;">List all major IATA Airports
-                                                <br/><code><a href="https://airport.api.aero/airport?user_key={insert-api-key-here}"  target="_blank">curl  -v  -X GET "https://airport.api.aero/airport?user_key={insert-api-key-here}"</a></code></li>
+                                                <br/><code><a href="https://airport.api.aero/airport?user_key={insert-api-key-here}"  target="_blank">curl -X GET 'https://airport-qa.api.aero/airport/v2/airports' -H 'x-apikey: 3035d833bb6e531654a3cce03e6b1fde'</a></code></li>
                                             <li style="margin-bottom: 10px;">Get specific details about an airport using an IATA code
-                                                <br/><code><a href="https://airport.api.aero/airport/AMS?user_key={insert-api-key-here}"  target="_blank">curl  -v  -X GET "https://airport.api.aero/airport/AMS?user_key={insert-api-key-here}"</a></code>                                                </li>
+                                                <br/><code><a href="https://airport.api.aero/airport/AMS?user_key={insert-api-key-here}"  target="_blank">curl -X GET 'https://airport-qa.api.aero/airport/v2/airport/AMS' -H 'x-apikey: 3035d833bb6e531654a3cce03e6b1fde'</a></code>                                                </li>
                                             <li style="margin-bottom: 10px;">Get a list of airports matching a given name or code
-                                                <br/><code><a href="https://airport.api.aero/airport/match/AMS?user_key={insert-api-key-here}"  target="_blank">curl -v  -X GET "https://airport.api.aero/airport/match/Amst?user_key={insert-api-key-here}"</a></code>                                                </li>
+                                                <br/><code><a href="https://airport.api.aero/airport/match/AMS?user_key={insert-api-key-here}"  target="_blank">curl -X GET 'https://airport-qa.api.aero/airport/v2/match/Amst' -H 'x-apikey: 3035d833bb6e531654a3cce03e6b1fde'</a></code>                                                </li>
                                             <li style="margin-bottom: 10px;">Get the distance between two airports
-                                                <br/><code><a href="https://airport.api.aero/airport/distance/AMS/CDG?user_key={insert-api-key-here}&units=km"  target="_blank">curl -v  -X GET "https://airport.api.aero/airport/distance/AMS/CDG?user_key={insert-api-key-here}&units=km"</a></code>                                                </li>
+                                                <br/><code><a href="https://airport.api.aero/airport/distance/AMS/CDG?user_key={insert-api-key-here}&units=km"  target="_blank">curl -X GET 'https://airport-qa.api.aero/airport/v2/distance/AMS/CDG?=&units=km' -H 'x-apikey: 3035d833bb6e531654a3cce03e6b1fde'</a></code>                                                </li>
                                             <li style="margin-bottom: 10px;">Find airports nearest a given latitude/longitude
-                                                <br/><code><a href="https://airport.api.aero/airport/nearest/52.297097/4.879903?maxAirports=10&user_key={insert-api-key-here}"  target="_blank">curl -v  -X GET "https://airport.api.aero/airport/nearest/52.297097/4.879903?maxAirports=10&user_key={insert-api-key-here}"</a></code>                                                </li>
+                                                <br/><code><a href="https://airport.api.aero/airport/nearest/52.297097/4.879903?maxAirports=10&user_key={insert-api-key-here}"  target="_blank">curl -X GET 'https://airport-qa.api.aero/airport/v2/nearest/52.297097/4.879903?maxAirports=10' -H 'x-apikey: 3035d833bb6e531654a3cce03e6b1fde'</a></code>                                                </li>
                                         </ul>
                                         <p>Click <a href="https://www.developer.aero/Airport-API/API-Overview">here</a> for
                                             documentation on the Airport API.</p>
                                 </div>
                             </div>
-<!-- BagTag API -->
+                            <!-- BagTag API -->
                             <div class="layout__item one-sixth">
 
                             </div>
