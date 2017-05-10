@@ -194,7 +194,7 @@
 
                                 <div style="display:none" id="answer1">
                                     <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
-                                    <p><strong>API Key:</strong> API-Key-To-Follow <br>
+                                    <p><strong>API Key:</strong> 3035d833bb6e531654a3cce03e6b1fde <br>
                                         <p>The following examples show you how to use the API to:</p>
                                         <ul>
                                             <li style="margin-bottom: 10px;">List all major IATA Airports
@@ -221,7 +221,7 @@
                                 <div style="display:none" id="answer14">
                                     <p>To call the Bag Tag API with your own code, the following API key can be used.
                                         <strong>Please note keys will only be available for the hackathon event!</strong><em></em></p>
-                                    <p><strong>API Key:</strong>API-Key-To-Follow<br>
+                                    <p><strong>API Key:</strong>6c4564f89d51e4a5cc526c820d39c256<br>
                                         <p>The API enables you to:</p>
                                         <ul>
                                             <li style="margin-bottom: 10px;">Issue an IATA compliant bag tag. The response will contain a url to retrieve
@@ -249,7 +249,7 @@
                             </div>
                             <div class="layout__item five-sixths">
                                 <h3><a href="#3rd" id="3rd" onclick="toggle('answer3');">Beacon API</a></h3>
-                                <div style="display:none" id="answer3">
+                                  <div style="display:none" id="answer3">
                                     <p>There are two APIs available:</p>
                                     <ul class="last">
                                         <li style="margin-bottom: 10px;">API to get the list of iBeacons deployed at an airport
@@ -260,8 +260,8 @@
                                         </li>
                                     </ul>
                                     <p>To access the APIs you will need an appId and apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
-                                    <p><strong>appId:</strong> APP-Id-To-Follow<br>
-                                        <strong>apiKey:</strong> API-Key-To-Follow</p>
+                                        <p><strong>appId:</strong> e719dcad<br>
+                                        <strong>x-apiKey:</strong> cedf92f7a02fd4e8cb585ba7477d9b19</p>
                                     <p>These values are passed in as HTTP headers (or query parameter). See <a href="https://www.developer.aero/Beacon-Registry-API/Registry-APIs/API-Key-Access-&-Control">here</a>                                        for examples.</p>
                                     <p>Check out some more
                                         <a href="https://www.developer.aero/Beacon-Registry-API/Beacon-Registry-APIs/Example-API-calls">example API calls</a>                                        and <a href="https://www.developer.aero/Beacon-Registry-API/Registry-APIs/Typical-usage-description">best practices on how to use the registry</a>                                        </p>
@@ -331,28 +331,28 @@
                                         time of arrival, aircraft type, arrival airport and marketing carrier. The service
                                         also includes notifications for status changes to a particular flight.</p>
                                     <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
-                                    <p><strong>API Key:</strong> API-Key-To-Follow<br>
+                                    <p><strong>API Key:</strong> 2cfd0827f82ceaccae7882938b4b1627<br>
                                         <p>The following examples show you how to use the API to:</p>
                                         <ul>
                                             <li style="margin-bottom: 10px;">Get flights departing DBX on the current day, in the next 4 hours (<a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
-                                                <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://flifo-qa.api.aero/flifo/v3/flights/dxb/d"</code>                                                </li>
+                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flights/dxb/d?futureWindow=4"</code>                                                </li>
                                             <li style="margin-bottom: 10px;">Get flights arriving DXB on the current day, in the next 4 hours (<a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/AllFlights">view full docs</a>)
-                                                <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://flifo-qa.api.aero/flifo/v3/flights/dxb/a"</code>                                                </li>
+                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flights/dxb/a?futureWindow=4"</code>                                                </li>
                                             <li style="margin-bottom: 10px;">Get Emirates (EK) flights departing DXB on the current day, in the next 2 hours
                                                 (
                                                 <a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/AllFlights">view full docs</a>)
-                                                <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://flifo-qa.api.aero/flifo/v3/flights/dxb/ek/d"</code>                                                </li>
+                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flights/dxb/ek/d?futureWindow=2"</code>                                                </li>
                                             <li style="margin-bottom: 10px;">Get British Airways (BA) flights arriving DXB on the current day, in the next
                                                 2 hours (<a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
-                                                <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://flifo-qa.api.aero/flifo/v3/flights/dxb/ba/a"</code>                                                </li>
+                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flights/dxb/ba/a?futureWindow=2"</code>                                                </li>
                                             <li style="margin-bottom: 10px;">Get Flight Record for flight Emirates EK007 departing DBX on the current day
                                                 (
                                                 <a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
-                                                <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://flifo-qa.api.aero/flifo/v3/flight/dxb/ek/007/d"</code>                                                </li>
+                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flight/dxb/ek/007/d"</code>                                                </li>
 
                                             <li style="margin-bottom: 10px;">Get Flight Record for flight Emirates EK030 arriving DBX on the current day (
                                                 <a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
-                                                <br/><code>curl -X GET --header "Accept: application/json" --header "X-apiKey: {insert-api-key-here}" "https://flifo-qa.api.aero/flifo/v3/flight/dxb/ek/030/a"</code>                                                </li>
+                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flight/dxb/ek/030/a"</code>                                                </li>
                                         </ul>
                                         <p>See <a href="https://www.developer.aero/Flight-Information-API/API-Overview">here</a>                                            for complete documentation on the Flight Information API.</p>
                                 </div>
