@@ -384,16 +384,18 @@
                             <div class="layout__item five-sixths">
                                 <h3><a href="#6th" id="6th" onclick="toggle('answer16');">Name Matching API</a></h3>
                                 <div style="display:none" id="answer16">
-                                    <p> This API allows the user to determine if a name in two different formats is the same
-                                        name. </p>
+                                    <p> This API allows the user to determine if the name on the boarding pass matches the name on the
+                                        passport. The order and formatting of the two can be different so this API normalizes the names.</p>
                                     <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
-                                    <p><strong>API Key:</strong> API-Key-To-Follow<br>
+                                    <p><strong>API Key:d795ed7104f6374bfb347ad9603ccbd4</strong> <br>
                                         <p>The following examples show you how to use the API to:</p>
                                         <ul>
-                                            <li style="margin-bottom: 10px;">Insert API call description here
-                                                <br/><code>curl -v -X GET -H "x-apiKey: {insert-api-key-here}" 'https://flightfollower-qa.api.aero/flightfollower/v1/MIA/DFW/AA/281?imgWidth=300&imgLength=300&rfc2397=false&base64=false'</code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Compare boarding pass formatted name to passport formatted name:
+                                                <br/><code>curl -v -X GET -H "x-apiKey:d795ed7104f6374bfb347ad9603ccbd4" 'http://namematchapidev.us-east-1.elasticbeanstalk.com/GroundServices/namematch/v3/match/XS?bpName=Smith%2FAllisonMs&mrzName=SMITH%3C%3CALLISON%3CJONES&trace=false&ruleset=1'</code>                                                </li>
                                         </ul>
-                                        <p>Need some documentation.</p>
+                                    <p>Note: <li> %2C is a / </li>
+                                        <li> %3C is a greater than sign </li>
+                                    </p>
                                 </div>
                             </div>
 
