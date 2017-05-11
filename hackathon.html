@@ -334,27 +334,29 @@
                                     <p><strong>API Key:</strong> 2cfd0827f82ceaccae7882938b4b1627<br>
                                         <p>The following examples show you how to use the API to:</p>
                                         <ul>
-                                            <li style="margin-bottom: 10px;">Get flights departing DBX on the current day, in the next 4 hours (<a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
-                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flights/dxb/d?futureWindow=4"</code>                                                </li>
-                                            <li style="margin-bottom: 10px;">Get flights arriving DXB on the current day, in the next 4 hours (<a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/AllFlights">view full docs</a>)
-                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flights/dxb/a?futureWindow=4"</code>                                                </li>
-                                            <li style="margin-bottom: 10px;">Get Emirates (EK) flights departing DXB on the current day, in the next 2 hours
+                                            <li style="margin-bottom: 10px;">Get flights departing MIA on the current day, in the next 4 hours (<a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
+                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flights/MIA/d?futureWindow=4"</code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Get flights arriving MIA on the current day, in the next 4 hours (<a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/AllFlights">view full docs</a>)
+                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flights/MIA/a?futureWindow=4"</code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Get Emirates (EK) flights departing MIA on the current day, in the next 2 hours
                                                 (
                                                 <a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/AllFlights">view full docs</a>)
                                                 <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flights/dxb/ek/d?futureWindow=2"</code>                                                </li>
-                                            <li style="margin-bottom: 10px;">Get British Airways (BA) flights arriving DXB on the current day, in the next
+                                            <li style="margin-bottom: 10px;">Get a particular airline's flights arriving MIA on the current day, in the next
                                                 2 hours (<a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
-                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flights/dxb/ba/a?futureWindow=2"</code>                                                </li>
-                                            <li style="margin-bottom: 10px;">Get Flight Record for flight Emirates EK007 departing DBX on the current day
+                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flights/MIA/XX/a?futureWindow=2"</code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Get Flight Record for a particular flight departing MIA on the current day*
                                                 (
                                                 <a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
-                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flight/dxb/ek/007/d"</code>                                                </li>
+                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flight/MIA/XX/###/d"</code>                                                </li>
 
-                                            <li style="margin-bottom: 10px;">Get Flight Record for flight Emirates EK030 arriving DBX on the current day (
+                                            <li style="margin-bottom: 10px;">Get Flight Record for a particular flight arriving MIA on the current day* (
                                                 <a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
-                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flight/dxb/ek/030/a"</code>                                                </li>
+                                                <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flight/MIA/XX/###/a"</code>                                                </li>
                                         </ul>
-                                        <p>See <a href="https://www.developer.aero/Flight-Information-API/API-Overview">here</a>                                            for complete documentation on the Flight Information API.</p>
+                                        <p>See <a href="https://www.developer.aero/Flight-Information-API/API-Overview">here</a>  
+                                           for complete documentation on the Flight Information API.</p>
+                                    *Note: In the curl commands above, replace XX with the airline code and ### with the flight number.
                                 </div>
                             </div>
 
@@ -387,7 +389,7 @@
                                     <p> This API allows the user to determine if the name on the boarding pass matches the name on the
                                         passport. The order and formatting of the two can be different. This API normalizes the names.</p>
                                     <li>Boarding pass format: Smith/AllisonMs</li>
-                                    <li>Passport format: SMITH%3C%3CALLISON%3CJONES </li>
+                                    <li>Passport format: SMITH&#60;&#60;ALLISON&#60;JONES </li>
                                                                                                                               
                                     <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
                                     <p><strong>API Key:d795ed7104f6374bfb347ad9603ccbd4</strong> <br>
