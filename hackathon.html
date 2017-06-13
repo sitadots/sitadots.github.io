@@ -333,6 +333,7 @@
                                     <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
                                     <p><strong>API Key:</strong> 2cfd0827f82ceaccae7882938b4b1627<br>
                                         <p>The following examples show you how to use the API to:</p>
+                                        <h4>SITA <span style="color:blue">V3</span> Format:</h4>
                                         <ul>
                                             <li style="margin-bottom: 10px;">Get flights departing MIA on the current day, in the next 4 hours (<a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
                                                 <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flights/MIA/d?futureWindow=4"</code>                                                </li>
@@ -353,6 +354,18 @@
                                             <li style="margin-bottom: 10px;">Get Flight Record for a particular flight arriving MIA on the current day* (
                                                 <a href="https://www.developer.aero/Flight-Information-API/API-Documentation/Developers-Documents/FlightRecord">view full docs</a>)
                                                 <br/><code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/v3/flight/MIA/XX/###/a"</code>                                                </li>
+                                        </ul>
+                                        <h4>ACRIS Seamless Travel <span style="color:blue">V1</span> Format:</h4>
+                                        <ul>
+                                            <li style="margin-bottom: 10px;">Get flight departing MIA on the current day
+                                                <br/>
+                                                <code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/aci-v1/flight/MIA/departure"</code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Get flight Arriving MIA on the current day
+                                                <br/>
+                                                <code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/aci-v1/flight/MIA/arrival"</code>                                                </li>
+                                            <li style="margin-bottom: 10px;">Get flight details.
+                                                <br/>
+                                                <code>curl -X GET -H 'Accept: application/json' -H 'X-apiKey: 2cfd0827f82ceaccae7882938b4b1627' "https://flifo-qa.api.aero/flifo/aci-v1/flightDetails/EI/3257/2017-06-13/EDI/DUB"</code>                                                </li>
                                         </ul>
                                         <p>See <a href="https://www.developer.aero/Flight-Information-API/API-Overview">here</a>  
                                            for complete documentation on the Flight Information API.</p>
