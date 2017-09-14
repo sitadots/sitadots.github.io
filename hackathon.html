@@ -408,12 +408,12 @@
                                     <li>Boarding pass format: Smith/AllisonMs</li>
                                     <li>Passport format: SMITH&#60;&#60;ALLISON&#60;JONES </li>
                                                                                                                               
-                                    <p>To access the API you will need an apiKey. <strong>Please note keys will only be available for the hackathon event!</strong></p>
+                                    <p>To access the API you will need an apiKey. </p>
                                     <p><strong>API Key:d795ed7104f6374bfb347ad9603ccbd4</strong> <br>
                                         <p>The following examples show you how to use the API to:</p>
                                         <ul>
                                             <li style="margin-bottom: 10px;">Compare boarding pass formatted name to passport formatted name:
-                                                <br/><code>curl -v -X GET -H "x-apiKey:d795ed7104f6374bfb347ad9603ccbd4" 'http://namematch-stg.api.aero/GroundServices/namematch/v3/match/XS?bpName=Smith%2FAllisonMs&mrzName=SMITH%3C%3CALLISON%3CJONES&trace=false&ruleset=SOD'</code>                                                </li>
+                                                <br/><code>curl -v -X GET -H "x-apiKey:d795ed7104f6374bfb347ad9603ccbd4" 'https://namematch-stg.api.aero/GroundServices/namematch/v3/match/XS?bpName=Smith%2FAllisonMs&mrzName=SMITH%3C%3CALLISON%3CJONES&trace=false&ruleset=SOD'</code>                                                </li>
                                         </ul>
                                     <p>Note: In the curl command above<li> %2F is a / </li>
                                         <li> %3C is a greater than sign </li>
